@@ -4,7 +4,6 @@ import { unified } from "unified";
 import { VFile } from "vfile";
 import remarkParse from "remark-parse/lib";
 import remarkRehype from "remark-rehype";
-import emoji from "remark-emoji";
 import remarkGfm from "remark-gfm";
 import rehypeRaw from "rehype-raw";
 import rehypeStringify from "rehype-stringify";
@@ -33,9 +32,6 @@ export const getParsedMarkdown: getParsedMarkdownProps = (
     .use(rehypeHighlight, {
       detect: false,
       ignoreMissing: true,
-    })
-    .use(emoji, {
-      emoticon: true,
     })
     .use(gfmState ? remarkGfm : null)
     .use(rehypeRaw)
