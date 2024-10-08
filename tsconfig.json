@@ -1,7 +1,11 @@
 {
   "compilerOptions": {
     "target": "ESNext",
-    "lib": ["DOM", "DOM.Iterable", "ESNext"],
+    "lib": [
+      "DOM",
+      "DOM.Iterable",
+      "ESNext"
+    ],
     /* Bundler mode */
     "noEmitOnError": true,
     "jsx": "react-jsx",
@@ -21,7 +25,14 @@
     "noUnusedParameters": true,
     "noFallthroughCasesInSwitch": true
   },
-  "include": ["*.d.ts", "src", "vite.config.ts"],
+  "include": [
+    "src",
+    "*.d.ts",
+    "vite.config.ts"
+  ],
+  "exclude": [
+    "node_modules"
+  ],
   "references": [
     {
       "path": "./tsconfig.node.json"
